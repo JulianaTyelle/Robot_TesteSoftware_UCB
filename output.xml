@@ -1,96 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-22T00:24:35.232468" rpa="false" schemaversion="5">
-<suite id="s1" name="Teste" source="C:\Users\julia\Robot_TesteSoftware_UCB\teste.robot">
-<test id="s1-t1" name="Scenario: Novo usuário se registra com dados válidos Feature:Registro de usuário na EDX" line="5">
-<kw name="Given O usuário está na página de registro da EDX">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-22T10:48:32.323207" rpa="false" schemaversion="5">
+<suite id="s1" name="Prova" source="C:\Users\julia\Robot_TesteSoftware_UCB\prova.robot">
+<test id="s1-t1" name="Scenario: Novo usuário se registra com dados válidos Feature:Registro de usuário na Automation Demo Site" line="5">
+<kw name="Given O usuário está na página de registro da Automation Demo Site">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-22T00:24:35.518264" level="INFO">Opening browser 'chrome' to base url 'https://authn.edx.org/register'.</msg>
-<arg>https://authn.edx.org/register</arg>
+<msg time="2024-11-22T10:48:32.977740" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<arg>https://demo.automationtesting.in/Register.html</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-22T00:24:35.518034" elapsed="2.699311"/>
+<status status="PASS" start="2024-11-22T10:48:32.977339" elapsed="9.148128"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-22T10:48:42.126403" elapsed="0.166395"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id:name</arg>
+<arg>//*[@id="basicBootstrapForm"]/div[1]/div[1]/input</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-22T00:24:38.217725" elapsed="4.972651"/>
+<status status="PASS" start="2024-11-22T10:48:42.294031" elapsed="0.156594"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:35.517636" elapsed="7.672905"/>
+<status status="PASS" start="2024-11-22T10:48:32.976548" elapsed="9.474447"/>
 </kw>
-<kw name="When remove os cookies da tela">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://*[@id="onetrust-close-btn-container"]/button</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-22T00:24:43.191451" elapsed="0.030586"/>
+<kw name="When insere o primeiro nome “Juliana”">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:42.454975" level="INFO">Typing text 'Juliana' into text field '//*[@id="basicBootstrapForm"]/div[1]/div[1]/input'.</msg>
+<arg>//*[@id="basicBootstrapForm"]/div[1]/div[1]/input</arg>
+<arg>Juliana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:42.454018" elapsed="0.372529"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:42.452184" elapsed="0.375169"/>
+</kw>
+<kw name="And insere o último nome &quot;Silva&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:42.831194" level="INFO">Typing text 'Silva' into text field '//*[@id="basicBootstrapForm"]/div[1]/div[2]/input'.</msg>
+<arg>//*[@id="basicBootstrapForm"]/div[1]/div[2]/input</arg>
+<arg>Silva</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:42.830292" elapsed="0.355826"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:42.829089" elapsed="0.357337"/>
+</kw>
+<kw name="And insere o endereço &quot;QS 07, Lote 01, Taguatinga Sul - Taguatinga, Brasília - DF, 71966-700&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:43.188222" level="INFO">Typing text 'QS 07, Lote 01, Taguatinga Sul - Taguatinga, Brasília - DF, 71966-700' into text field '//*[@id="basicBootstrapForm"]/div[2]/div/textarea'.</msg>
+<arg>//*[@id="basicBootstrapForm"]/div[2]/div/textarea</arg>
+<arg>QS 07, Lote 01, Taguatinga Sul - Taguatinga, Brasília - DF, 71966-700</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:43.187820" elapsed="0.550150"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:43.187196" elapsed="0.551016"/>
+</kw>
+<kw name="And insere o email “juliana.tsilva@a.ucb.br”">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:43.739730" level="INFO">Typing text 'juliana.tsilva@a.ucb.br' into text field '//*[@id="eid"]/input'.</msg>
+<arg>//*[@id="eid"]/input</arg>
+<arg>juliana.tsilva@a.ucb.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:43.739419" elapsed="0.312812"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:43.738934" elapsed="0.313681"/>
+</kw>
+<kw name="And insere o numero de telefone &quot;33569000&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:44.054852" level="INFO">Typing text '33569000' into text field '//*[@id="basicBootstrapForm"]/div[4]/div/input'.</msg>
+<arg>//*[@id="basicBootstrapForm"]/div[4]/div/input</arg>
+<arg>33569000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:44.054355" elapsed="0.230453"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:44.053501" elapsed="0.231615"/>
+</kw>
+<kw name="And seleciona um genero &quot;FeMale&quot;">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:44.286903" level="INFO">Selecting 'FeMale' from radio button 'radiooptions'.</msg>
+<arg>radiooptions</arg>
+<arg>FeMale</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-11-22T10:48:44.286356" elapsed="0.179554"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:44.285792" elapsed="0.180372"/>
+</kw>
+<kw name="And seleciona um ou mais hobbies &quot;Movies&quot;">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:44.467905" level="INFO">Selecting checkbox '//*[@id="checkbox2"]'.</msg>
+<arg>//*[@id="checkbox2"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:44.467559" elapsed="0.207556"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:44.466965" elapsed="0.208553"/>
+</kw>
+<kw name="And escolhe um idioma &quot;Portuguese&quot;">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:44.677784" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-22T10:48:44.676991" elapsed="0.047845"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-22T10:48:45.726636" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-22T10:48:44.725284" elapsed="1.001617"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-22T00:24:43.222563" level="INFO">Clicking element 'xpath://*[@id="onetrust-close-btn-container"]/button'.</msg>
-<arg>xpath://*[@id="onetrust-close-btn-container"]/button</arg>
+<msg time="2024-11-22T10:48:45.727822" level="INFO">Clicking element 'id:msdd'.</msg>
+<arg>id:msdd</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-22T00:24:43.222300" elapsed="0.102003"/>
+<status status="PASS" start="2024-11-22T10:48:45.727344" elapsed="0.221156"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:43.191032" elapsed="0.133481"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:45.949494" level="INFO">Clicking element 'xpath://a[text()="Portuguese"]'.</msg>
+<arg>xpath://a[text()="Portuguese"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:45.949008" elapsed="0.166020"/>
 </kw>
-<kw name="And insere o nome completo “Juliana Tyelle Pires da Silva”">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-22T00:24:43.325692" level="INFO">Typing text 'Juliana Tyelle Pires da Silva' into text field 'id:name'.</msg>
-<arg>id:name</arg>
-<arg>Juliana Tyelle Pires da Silva</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-22T00:24:43.325487" elapsed="0.302080"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:46.115759" level="INFO">Clicking element 'xpath=//body'.</msg>
+<arg>xpath=//body</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:46.115393" elapsed="0.208229"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:43.325078" elapsed="0.302831"/>
+<status status="PASS" start="2024-11-22T10:48:44.676446" elapsed="1.647588"/>
 </kw>
-<kw name="And insere o email “julianatyelle.pires@gmail.com”">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-22T00:24:43.629439" level="INFO">Typing text 'julianatyelle.pires@gmail.com' into text field 'id:email'.</msg>
-<arg>id:email</arg>
-<arg>julianatyelle.pires@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-22T00:24:43.629102" elapsed="0.294993"/>
+<kw name="And escolhe uma habilidade &quot;Python&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:46.326627" level="INFO">Clicking element 'id:Skills'.</msg>
+<arg>id:Skills</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:46.326131" elapsed="0.213825"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:43.628625" elapsed="0.295695"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:46.541385" level="INFO">Clicking element '//*[@id="Skills"]/option[61]'.</msg>
+<arg>//*[@id="Skills"]/option[61]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:46.540447" elapsed="0.084292"/>
 </kw>
-<kw name="And insere o nome de usuário público “Juliana Tyelle”">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-22T00:24:43.925719" level="INFO">Typing text 'Juliana Tyelle' into text field 'id:username'.</msg>
-<arg>id:username</arg>
-<arg>Juliana Tyelle</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-22T00:24:43.925419" elapsed="0.251026"/>
+<status status="PASS" start="2024-11-22T10:48:46.325262" elapsed="0.300044"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:43.924945" elapsed="0.251684"/>
+<kw name="And seleciona um pais &quot;Australia&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:46.629312" level="INFO">Clicking element '//*[@id="basicBootstrapForm"]/div[10]/div/span/span[1]/span'.</msg>
+<arg>//*[@id="basicBootstrapForm"]/div[10]/div/span/span[1]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:46.628566" elapsed="0.254626"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:46.884401" level="INFO">Clicking element 'xpath=//li[text()="Australia"]'.</msg>
+<arg>xpath=//li[text()="Australia"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:46.883845" elapsed="0.150425"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:46.627430" elapsed="0.407182"/>
+</kw>
+<kw name="And escolhe o ano de nascimento &quot;1980&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:47.036622" level="INFO">Clicking element 'id:yearbox'.</msg>
+<arg>id:yearbox</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:47.036295" elapsed="0.200707"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:47.238110" level="INFO">Clicking element '//*[@id="yearbox"]/option[66]'.</msg>
+<arg>//*[@id="yearbox"]/option[66]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:47.237439" elapsed="0.080290"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:47.035675" elapsed="0.282359"/>
+</kw>
+<kw name="And escolhe o mes de nascimento &quot;April&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:47.321554" level="INFO">Clicking element 'id:basicBootstrapForm'.</msg>
+<arg>id:basicBootstrapForm</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:47.320289" elapsed="0.210780"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:47.531854" level="INFO">Clicking element '//*[@id="basicBootstrapForm"]/div[11]/div[2]/select/option[5]'.</msg>
+<arg>//*[@id="basicBootstrapForm"]/div[11]/div[2]/select/option[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:47.531470" elapsed="0.061131"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:47.319073" elapsed="0.273752"/>
+</kw>
+<kw name="And escolhe o dia de nascimento &quot;11&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:47.594886" level="INFO">Clicking element 'id:daybox'.</msg>
+<arg>id:daybox</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:47.594441" elapsed="0.170851"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:47.766509" level="INFO">Clicking element '//*[@id="daybox"]/option[12]'.</msg>
+<arg>//*[@id="daybox"]/option[12]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:47.765852" elapsed="0.072785"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:47.593677" elapsed="0.245224"/>
 </kw>
 <kw name="And insere uma senha alfanumérica">
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-11-22T00:24:44.177845" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-11-22T00:24:44.243403" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id:password</arg>
-<arg>testeUCB2024@</arg>
+<msg time="2024-11-22T10:48:47.841176" level="INFO">Typing password into text field 'id:firstpassword'.</msg>
+<msg time="2024-11-22T10:48:47.916047" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:firstpassword</arg>
+<arg>provaUCB@2024</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-22T00:24:44.177540" elapsed="0.221675"/>
+<status status="PASS" start="2024-11-22T10:48:47.840599" elapsed="0.255992"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:44.177125" elapsed="0.222248"/>
+<status status="PASS" start="2024-11-22T10:48:47.839811" elapsed="0.257030"/>
 </kw>
-<kw name="And clicar no botão “Criar uma conta de graca”">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>id:register-user</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-11-22T00:24:44.400367" elapsed="0.337833"/>
+<kw name="And confirma a senha alfanumérica">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-22T10:48:48.098650" level="INFO">Typing password into text field 'id:secondpassword'.</msg>
+<msg time="2024-11-22T10:48:48.169873" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:secondpassword</arg>
+<arg>provaUCB@2024</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T10:48:48.098200" elapsed="0.227444"/>
 </kw>
+<status status="PASS" start="2024-11-22T10:48:48.097589" elapsed="0.228347"/>
+</kw>
+<kw name="And clica no botão “Submit”">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-22T00:24:44.739223" level="INFO">Clicking element 'id:register-user'.</msg>
-<arg>id:register-user</arg>
+<msg time="2024-11-22T10:48:48.327924" level="INFO">Clicking element 'id:submitbtn'.</msg>
+<arg>id:submitbtn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-22T00:24:44.738681" elapsed="0.087264"/>
+<status status="PASS" start="2024-11-22T10:48:48.327576" elapsed="0.182029"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:44.399910" elapsed="0.426230"/>
+<status status="PASS" start="2024-11-22T10:48:48.326854" elapsed="0.182984"/>
 </kw>
-<status status="PASS" start="2024-11-22T00:24:35.516199" elapsed="9.310307"/>
+<kw name="Then fecha navegador">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-22T10:48:48.512184" elapsed="2.418990"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:48.510828" elapsed="2.420612"/>
+</kw>
+<status status="PASS" start="2024-11-22T10:48:32.973838" elapsed="17.958157"/>
 </test>
-<status status="PASS" start="2024-11-22T00:24:35.235232" elapsed="9.593343"/>
+<status status="PASS" start="2024-11-22T10:48:32.326704" elapsed="18.607162"/>
 </suite>
 <statistics>
 <total>
@@ -99,7 +250,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Prova">Prova</stat>
 </suite>
 </statistics>
 <errors>
