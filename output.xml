@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-22T00:24:35.232468" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste" source="C:\Users\julia\Robot_TesteSoftware_UCB\teste.robot">
+<test id="s1-t1" name="Scenario: Novo usuário se registra com dados válidos Feature:Registro de usuário na EDX" line="5">
+<kw name="Given O usuário está na página de registro da EDX">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-22T00:24:35.518264" level="INFO">Opening browser 'chrome' to base url 'https://authn.edx.org/register'.</msg>
+<arg>https://authn.edx.org/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-22T00:24:35.518034" elapsed="2.699311"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T00:24:38.217725" elapsed="4.972651"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:35.517636" elapsed="7.672905"/>
+</kw>
+<kw name="When remove os cookies da tela">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="onetrust-close-btn-container"]/button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T00:24:43.191451" elapsed="0.030586"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T00:24:43.222563" level="INFO">Clicking element 'xpath://*[@id="onetrust-close-btn-container"]/button'.</msg>
+<arg>xpath://*[@id="onetrust-close-btn-container"]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T00:24:43.222300" elapsed="0.102003"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:43.191032" elapsed="0.133481"/>
+</kw>
+<kw name="And insere o nome completo “Juliana Tyelle Pires da Silva”">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T00:24:43.325692" level="INFO">Typing text 'Juliana Tyelle Pires da Silva' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>Juliana Tyelle Pires da Silva</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T00:24:43.325487" elapsed="0.302080"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:43.325078" elapsed="0.302831"/>
+</kw>
+<kw name="And insere o email “julianatyelle.pires@gmail.com”">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T00:24:43.629439" level="INFO">Typing text 'julianatyelle.pires@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>julianatyelle.pires@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T00:24:43.629102" elapsed="0.294993"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:43.628625" elapsed="0.295695"/>
+</kw>
+<kw name="And insere o nome de usuário público “Juliana Tyelle”">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T00:24:43.925719" level="INFO">Typing text 'Juliana Tyelle' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>Juliana Tyelle</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T00:24:43.925419" elapsed="0.251026"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:43.924945" elapsed="0.251684"/>
+</kw>
+<kw name="And insere uma senha alfanumérica">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-22T00:24:44.177845" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-11-22T00:24:44.243403" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>testeUCB2024@</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T00:24:44.177540" elapsed="0.221675"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:44.177125" elapsed="0.222248"/>
+</kw>
+<kw name="And clicar no botão “Criar uma conta de graca”">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:register-user</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T00:24:44.400367" elapsed="0.337833"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T00:24:44.739223" level="INFO">Clicking element 'id:register-user'.</msg>
+<arg>id:register-user</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T00:24:44.738681" elapsed="0.087264"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:44.399910" elapsed="0.426230"/>
+</kw>
+<status status="PASS" start="2024-11-22T00:24:35.516199" elapsed="9.310307"/>
+</test>
+<status status="PASS" start="2024-11-22T00:24:35.235232" elapsed="9.593343"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

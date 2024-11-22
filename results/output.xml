@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-21T23:30:51.094776" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot TesteSoftware UCB" source="C:\Users\julia\Robot_TesteSoftware_UCB">
+<suite id="s1-s1" name="Teste" source="C:\Users\julia\Robot_TesteSoftware_UCB\teste.robot">
+<test id="s1-s1-t1" name="Cenário 1: Acessando o site da QAZANDO" line="12">
+<kw name="Abrir Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-21T23:30:51.827165" level="INFO">Opening browser 'chrome' to base url 'https://automationpratice.com.br/'.</msg>
+<msg time="2024-11-21T23:30:51.837744" level="INFO">Executing: C:\Users\julia\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<msg time="2024-11-21T23:30:54.210077" level="WARN">Unable to obtain driver using Selenium Manager: Selenium Manager failed for: C:\Users\julia\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered</msg>
+<msg time="2024-11-21T23:30:54.214289" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-11-21T23:30:54.215710" level="FAIL">SeleniumManagerException: Message: Selenium Manager failed for: C:\Users\julia\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+</msg>
+<arg>https://automationpratice.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-11-21T23:30:51.825156" elapsed="2.433393">SeleniumManagerException: Message: Selenium Manager failed for: C:\Users\julia\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+</status>
+</kw>
+<status status="FAIL" start="2024-11-21T23:30:51.820935" elapsed="2.438407">SeleniumManagerException: Message: Selenium Manager failed for: C:\Users\julia\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+</status>
+</kw>
+<status status="FAIL" start="2024-11-21T23:30:51.816914" elapsed="2.443610">SeleniumManagerException: Message: Selenium Manager failed for: C:\Users\julia\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+</status>
+</test>
+<status status="FAIL" start="2024-11-21T23:30:51.175519" elapsed="3.091329"/>
+</suite>
+<status status="FAIL" start="2024-11-21T23:30:51.109304" elapsed="3.166299"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot TesteSoftware UCB">Robot TesteSoftware UCB</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Teste">Robot TesteSoftware UCB.Teste</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-21T23:30:54.210077" level="WARN">Unable to obtain driver using Selenium Manager: Selenium Manager failed for: C:\Users\julia\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered</msg>
+</errors>
+</robot>
